@@ -1,0 +1,52 @@
+<p id="notice"><%= notice %></p>
+
+<div class = "question">
+    <div class = "picLikes">
+        <%= image_tag("question1.jpg", :alt => "") %>
+        <br/>
+        <div class = "quesText"><%= @question.user.username %></div>
+    </div>   
+    <div class = "quesText">
+        <h5><%= @question.head %></h5>
+        <div style = "margin-bottom: 20px"><%= @question.text %></div>
+        <br/>
+        <% if signed_in? && current_user == @question.user %>
+        <div class = "ansTags">
+          <%= link_to t('main.edit'), edit_question_path(@question), class: "btn btn-outline-dark" %>
+          <%= link_to t("main.delete"), question_path(@question), data: {method: :delete, confirm: t('main.sure_del')}, class: "btn btn-outline-danger" %>
+        </div>
+        <% end %>
+    </div>
+</div> 
+
+<%= render 'aform', answer: @answer %>
+<%= link_to t('main.back'), questions_path, class: "btn btn-outline-dark", style: "margin-top: 40px;" %>
+
+
+<% @answers.each do |answer| %>
+<% if answer.body&.length %>
+    <div class = "ansDiv",  style = "margin-bottom: 30px;">
+      <div class = "answer">
+          <div class = "picLikes">
+            <%= image_tag("answer1.jpg", :alt => "") %>
+            <br/>
+            <div class = "quesText"><%= answer.user.username %></div>   
+          </div>   
+          <div class = "ansText">
+                <%= answer.body %>
+                <br/><br/><br/>
+                <% if signed_in? && current_user == answer.user %>
+                <div>
+                  <%# link_to t("questions.show.edit"), edit_question_answer_path(@question, answer), class: 'btn btn-success' %>
+                  <%= link_to t('main.delete'), question_answer_path(@question, answer), data: {method: :delete, confirm: t('main.sure_del')}, class: "btn btn-outline-danger" %>
+                </div>
+                <% end %>
+          </div>
+      </div>
+    </div>  
+
+  <% end %>
+<% end %>
+
+<%= paginate @answers %>
+

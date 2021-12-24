@@ -1,0 +1,4 @@
+<h1><%= t('signup.create') %></h1>
+
+<%= render 'form', user: @user %>
+<%= link_to t('main.back'),  session_login_path, class: "btn btn-outline-dark" %>

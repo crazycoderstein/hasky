@@ -1,0 +1,5 @@
+<h1><%= t('oneq.edit') %></h1>
+
+<%= render 'form', question: @question %>
+
+<%= link_to t('main.back'), question_path(@question), class: "btn btn-outline-dark" %>

@@ -1,0 +1,25 @@
+
+    <h3 class = "title"><%= t('main.allq') %></h3>
+
+
+    <% @questions.each do |question| %>
+
+        <div class = "question">
+            <div class = "picLikes">
+                <%= image_tag("question1.jpg" ,:alt => "") %>
+                <br/>
+                <div class = "quesText"><%= question.user.username %></div>
+            </div>   
+            <div class = "quesText">
+                <h5><%= link_to question.head, question_path(question) %></h5>
+                <div style = "margin-bottom: 20px"><%= question.text %></div>
+                <br/>
+                <% if question.answers.count > 0 %>
+                <div class>
+                    <%= link_to t('oneq.ans_сount') + question.answers.count.to_s, question_path(question) %>
+                </div>
+                <% end %>
+            </div>
+        </div> 
+    <% end %>
+<%= paginate @questions %>

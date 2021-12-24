@@ -1,0 +1,311 @@
+.my-primary {
+    background-color: rgb(60, 60, 60);
+    color: black;
+    text-decoration-color: black;
+    padding-left: 50px;
+    padding-right: 50px;
+    }
+
+.searchBar {
+   /* width: 500px !important;*/
+    width: 50%;
+}
+
+.searchButton {
+    margin-right: 50px;
+}
+
+#hask {
+    max-width: 90px;
+    font-weight: bold;
+    /*margin-left: 80px;*/
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 65% 35%;
+    min-width: 1000px;
+}
+
+.column {
+    padding: 60px;
+    padding-bottom: 40px;
+}
+
+.question {
+    border: solid 2px black;
+    border-radius: 5px;
+    padding: 20px;
+    margin-top:  60px;
+    margin-bottom: 60px;
+    display: grid;
+    grid-template-columns: 15% 85%;
+}
+
+.question img, .answer img {
+    border: 2px solid black;
+    border-radius: 50%;
+    width: 65px;
+    height: 65px;
+    margin-bottom: 15px;  
+    margin-left: 15px;
+    margin-right: auto;
+}
+
+.profile {
+    text-align: center;
+    margin-right: 30px;
+    color: white;
+    margin-top: 15px;
+}
+
+.nav-item img {
+    border: 2px solid white;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+
+}
+
+.question img:hover {
+    width: 70px;
+    height: 70px; 
+    margin-bottom: 10px;   
+}
+
+.blackRef, .blackRef a {
+    color: black;
+    text-decoration: none;
+    background-color: white;
+}
+
+.blackRef2, .blackRef2 a {
+    text-decoration: underline;
+    text-decoration-color: black;
+    text-decoration-skip-ink: none;
+    color: black;
+}
+
+
+
+.blackRef2:hover {
+    text-decoration: underline;
+    text-decoration-color: black;
+    text-decoration-skip-ink: none;
+
+    color: black;
+}
+
+.blackRef:hover {
+    text-decoration: underline;
+    text-decoration-color: black;
+    color: black;
+}
+
+.quesText, .ansText {
+    font-size: 18px;
+    padding-left: 5px;
+    margin-left: 5px;
+}
+
+.picLikes {
+    min-width: 90px;
+}
+
+.topList {
+    margin-top: 30px;
+    font-size: 1.3em;
+}
+
+.topList li {
+    margin-bottom: 7px;
+}
+
+.anTags  {
+    display: grid;
+    grid-template-columns: 60% 40%;
+}
+
+.anTags *{
+    padding-left: 5px;
+}
+
+.sticky {
+    position: sticky;
+    top: 40px;
+}
+
+footer {
+    background-color: rgb(60, 60, 60);
+    height: 55px;
+    width: 100%;
+    padding-left: 60px;
+    padding-top: 15px;
+    color: white;   
+    
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+.paginator {
+    height: 40px;
+    margin-left: 20px;
+}
+
+.paginator button {
+    height: 30px;
+    width: 30px;
+    margin: 10px;
+    padding: 1px;
+}
+
+.likesDiv { 
+    font-size: 120%;
+    padding-top: 27px;
+}
+
+.likesDiv button {
+    width: 50px;
+    height: 27px;
+    
+    padding: 8px;
+    padding-top: 0px;
+    padding-bottom: 4px;
+    margin: 10px;
+    margin-bottom: 0;
+}
+
+.likesDiv span {
+    position: relative;
+    top: 7px;
+}
+
+.hotTags {
+    font-weight: 200;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.6em;
+    padding: 25px 10px;
+}
+
+.hotTags a {
+    text-decoration: none;
+    color: red;
+}
+
+.hotTags .smallTag {
+    font-size: 1.4em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: green;
+}
+
+.hotTags .bigTag {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.7em;
+    color: blue;
+}
+
+
+/*for a ask-section only*/
+
+.newQ, .loginDiv {
+    background-color: rgb(228, 228, 228);
+    margin-top: 50px;
+    padding: 50px;
+    border-radius: 10px;
+}
+
+.newQ .question {
+    grid-template-columns: 100%;
+    margin-top: 30px;
+}
+
+.blockName {
+    margin-bottom: 30px;
+}
+
+.newQ textarea {
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    padding-left: 5px;
+    width: 100%;
+    min-height: 45px;
+}
+
+#big {
+    min-height: 100px;
+}
+
+.twoBut { 
+    margin-top: 35px;
+}
+
+.goBtn {
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.cnlBtn, .signupBtn{
+    float: right;
+}
+
+.title {
+    display:inline-block;
+    margin-right: 35px;
+}
+
+/*for a one-question section only*/
+
+
+
+.ansDiv {
+    background-color: rgb(228, 228, 228);
+    border-radius: 10px;
+    padding-bottom: 20px;
+}
+
+.answer {
+    padding: 20px;
+    padding-top: 35px;
+    margin-top: 30px;
+    /*margin-bottom: 15px;*/
+    display: grid;
+    grid-template-columns: 15% 85%;    
+}
+
+.newAns {
+    padding-top: 20px;
+}
+.newAns form {
+    width: 100%;
+}
+
+.newAns form textarea {
+    
+    width: 100%;
+    border-radius: 5px;
+    padding-left: 5px;  
+    min-height: 80px;  
+}
+
+.newAns button {
+    float: right;
+}
+
+/*for a login section only*/
+
+.loginDiv {
+    margin-bottom: 100px;
+    padding-bottom: 20px;
+    width: 85%;
+}
+
+html,body{
+    margin:0 !important;
+    padding:0; 
+    height: 100%;
+    min-height: 100%;
+}

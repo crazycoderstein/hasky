@@ -1,0 +1,76 @@
+en:
+  en: "En"
+  ru: "Ru"
+
+  activerecord:
+    models:
+        question: "Question"
+        answer: "Answer"
+        user: "User"
+
+
+    attributes:
+      question:
+        head: "Head"
+        text: "Text"
+
+      answer:
+        body: "Body"
+
+      user: 
+        login: "Username"
+        password_digest: "Password"
+        password_confirmation: "Password confirmation"
+
+  header:
+    logout: "Log out"
+    home: "Home"
+    hask: "h'ASK!"
+    hot_tags: "Hot"
+    top_users: "Top 5 users (stop h'ASKing pls)"
+    made_by: "Made by "
+    creator: "Maxim Kirillov"
+  
+  main:
+    allq: "All questions"
+    edit: "Edit"
+    back: "Back"
+    delete: "Delete"
+    login: "Log in!"
+    signup: "Sign up"
+    sure_del: "Are your sure?"
+    edit_user: "Edit user"
+
+  oneq:
+    holder: "Write your witty answer here.."
+    publish: "Publish"
+    edit: "Edit question"
+    ans_сount: "Answers: "
+    suc_created: "Question was successfully created!"
+    suc_updated: "Question was successfully updated!"
+    suc_deleted: "Question was successfully deleted!"
+
+  ans: 
+    suc_created: "Answer created successfully!"
+
+  newq:
+    new: "New question"
+    head: "Head"
+    text: "Text"
+    ask: "h'ASK!"
+
+  login:
+    log_in: "Log In"
+    username: "Username"
+    password: "Password"
+
+  signup:
+    create: "Create new account"
+
+  error:
+    save_user: "error prohibited this user from being saved:"
+
+  pagination:
+    first: "First"
+    last: "Last"
+  

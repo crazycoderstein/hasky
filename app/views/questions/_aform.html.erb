@@ -1,0 +1,8 @@
+<%= form_with model: [@question, @answer] do |form| %>
+          <div class="mb-3 row"> 
+            <div class="col-12">
+              <%= form.text_area :body, required: true, placeholder: t('oneq.holder'), class: "form-control" %>
+            </div>
+          </div>
+        <%= form.submit t('oneq.publish'), class: "btn btn-dark" %>
+<% end %>

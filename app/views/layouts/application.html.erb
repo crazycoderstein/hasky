@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HaskyOnRails</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= javascript_pack_tag "application", 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag "questions" %>
+
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header>
+    <nav class = "navbar navbar-expand-lg navbar-dark my-primary">
+        <div class = "container-fluid">
+            <%= image_tag("haskyOnRailsLogo.jpg", :alt => "hASKy", :width => 150, :height => 60, id: "picture") %>
+
+            <ul class = "navbar-nav mr-auto">
+            <% I18n.available_locales.each do |locale| %>
+
+                <% if I18n.locale == locale %>
+                    <li><%= tag.span t(locale), class: 'btn btn-outline-light me-2' %></li>
+                <% else %>
+                    <% if signed_in? %>
+                        <li><%= link_to t(locale), root_path(locale: locale), class: 'btn btn-outline-light me-2' %></li>
+                    <% else %>
+                        <li><%= link_to t(locale), session_login_path(locale: locale), class: 'btn btn-outline-light me-2' %>
+                    <% end %>
+                <% end %>
+            <% end %>
+          </ul>
+
+
+             <% if signed_in? %>
+                <%= form_with url: new_question_path, method: :get do |form| %>
+                    <%= form.submit t('header.hask'),:id => "hask", :class => "btn btn-light searchButton" %>
+                <% end %>
+
+           
+
+                <ul class = "navbar-nav mr-auto">
+                    <li class="nav-item"> <%= link_to t('header.home'), root_path, :class => "nav-link text-light", style: "font-size: 17px" %></li>
+                    <li class="nav-item"> <%= link_to current_user.username, edit_user_path(current_user), class: "nav-link text-light", style: "font-size: 17px; margin-right: 20px;" %></li>
+                    <li class="nav-item"> <%= link_to t('header.logout'), session_logout_path, :class => "nav-link text-light" %></li>
+                </ul>
+            <% end %>
+            
+            </div>
+    </nav>
+</header>
+<div class = "grid">
+    <div class = "column">
+
+    <%= yield %>
+
+    </div>
+        <div class = "column">
+            <% if signed_in? %>
+            <div class = "sticky">
+                <div>
+                    <h3 id = "hotT"><%= t('header.hot_tags') %></h3>
+                    <p class = "hotTags">
+                    
+                        <span class = "bigTag"> #hasky</span><br/><br/>
+                        <span class = "smallTag  ">#husky</span> <br/><br/>
+                        <span style = "color: red;">#programming</span><br/><br/>
+                        <span class = "smallTag  ">#RubyOnRails</span><br/><br/>
+                        <span class = "bigTag"> #nginx</span><br/><br/>
+                    </p>
+                </div>
+                <%# <div>
+                    <h3><%= t('header.top_users') </h3>
+                    <ol class = "topList blackRef2">
+                        <li>Maxim Kirillov</li>
+                        <li>Ilya Shluzhas</li>
+                        <li>Michael Chichunov</li>
+                        <li>Maxim Kirillov</li>
+                        <li>Ilya Shluzhas</li>
+                    </ol>
+                </div> %>
+            </div>
+            <% end %>
+        </div>
+    </div>
+
+
+  </body>
+    <!-- <footer><%= t('header.made_by') %><a href = "https://vk.com/memator3000"><%= t('header.creator') %></a></footer> -->
+
+
+</html>

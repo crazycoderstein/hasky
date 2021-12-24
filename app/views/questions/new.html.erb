@@ -1,0 +1,5 @@
+<h1><%= t('newq.new') %></h1>
+
+<%= render 'form', question: @question %>
+
+<%= link_to t('main.back'), questions_path, class: "btn btn-outline-dark", style: "margin-top: 40px" %>

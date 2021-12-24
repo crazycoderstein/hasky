@@ -1,0 +1,76 @@
+ru:
+  en: "Англ"
+  ru: "Рус"
+
+  activerecord:
+    models:
+      question: "Вопрос"
+      answer: "Ответ"
+      user: "Пользователь"
+
+    attributes:
+      question:
+        head: "Заголовок"
+        text: "Текст"
+
+      answer:
+        body: "Текст"
+
+      user:
+        username: "Имя пользователя"
+        password: "Пароль"
+        password_confirmation: "Повторите пароль"
+
+  header:
+    logout: "Выйти"
+    home: "Главная"
+    hask: "Спроси!"
+    hot_tags: "Популярное"
+    top_users: "Топ 5 пользователей"
+    made_by: "Разработал "
+    creator: "Максим Кириллов"
+
+  main:
+    allq: "Все вопросы"
+    edit: "Редактировать"
+    back: "Назад"
+    delete: "Удалить"
+    login: "Войти!"
+    signup: "Зарегистрироваться"
+    sure_del: "Вы уверены?"
+    edit_user: "Редактирование профиля"
+
+  oneq:
+    holder: "Напишите ваш ответ здесь.."
+    publish: "Опубликовать"
+    edit: "Редактирование вопроса"
+    ans_сount: "Ответы: "
+    suc_created: "Ваш вопрос опубликован!"
+    suc_updated: "Ваш вопрос отредактирован!"
+    suc_deleted: "Ваш вопрос удалён!"
+
+  newq:
+    new: "Задать вопрос"
+    head: "Заголовок"
+    text: "Текст"
+    ask: "Спросить!"
+
+  ans: 
+    suc_created: "Ответ отправлен!"
+
+  login:
+    log_in: "Вход в аккаунт"
+    username: "Имя пользователя"
+    password: "Пароль"
+
+  signup:
+    create: "Регистрация"
+
+  error:
+    save_user: "ошибка(ошибки) не позволили сохранить пользователя"
+
+  pagination:
+    first: "В начало"
+    last: "В конец"
+    next: "next"
+    prev: "prev"
